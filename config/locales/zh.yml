@@ -1,0 +1,15 @@
+"zh-CN":
+    hello: "你好"
+    say:
+        hello: "说你好"
+    courses:
+        title: "创建新的课程"
+    activerecord:
+        models:
+            course: "课程"
+        attributes:
+            course:
+                name: "课程名称"
+                description: "描述"
+                content: "内容"
+                author: "作者"

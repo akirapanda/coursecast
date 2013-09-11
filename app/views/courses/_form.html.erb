@@ -1,8 +1,8 @@
 <%= form_for(@course,:html=>{:class=>"form-horizontal"}) do |f| %>
   <% if @course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
-      <ul>
+	<div class="alert alert-block alert-error">
+		<a class="close" data-dismiss='alert' href="#">x</a>
+		<p><strong>有<%=@course.errors.count%>处问题导致无法提交:</strong></p>
       <% @course.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
@@ -13,36 +13,28 @@
 	<legend>课程基本信息</legend>
  </fieldset>
  <div class="control-group">
-  <div class="control-label">
-    <%= f.label :name ,"名称",:class=>"control-label" %>
+    <%= f.label :name,:class=>"control-label" %>
     <div class="controls">
     <%= f.text_field :name %>
     </div>
-  </div>
 </div>
 <div class="control-group">
-  <div class="control-label">
-    <%= f.label :author,"作者",:class=>"control-label" %>
+    <%= f.label :author,:class=>"control-label" %>
     <div class="controls">
     <%= f.text_field :author %>
-	</div>
   </div>
 </div>
  <div class="control-group">
-  <div class="control-label">
-    <%= f.label :description,"描述",:class=>"control-label"%>
+    <%= f.label :description,:class=>"control-label"%>
     <div class="controls">
     <%= f.text_field :description %>
 	</div>
-  </div>
 </div>
  <div class="control-group">
-  <div class="control-label">
-    <%= f.label :content,"内容" ,:class=>"control-label"%>
+    <%= f.label :content,:class=>"control-label"%>
     <div class="controls">
     <%= f.text_area :content %>
 	</div>
-  </div>
 </div>
 <div class="control-group">
 	<div class="controls">

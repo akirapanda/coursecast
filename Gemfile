@@ -1,5 +1,7 @@
 source 'http://ruby.taobao.org'
 
+gem "rails-i18n","0.1.8"
+
 #Bootstrap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
@@ -9,6 +11,9 @@ gem "bootstrap-will_paginate", "~> 0.0.9"
 #pageinate
 gem 'will_paginate' ,'>=3.0.pre'
 
+
+#form
+gem 'simple_form',"3.0.0.rc"
 
 gem "cells"
 
