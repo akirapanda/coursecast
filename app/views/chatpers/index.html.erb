@@ -18,7 +18,7 @@
       <tr>
         <td><%= chatper.title %></td>
         <td><%= chatper.img %></td>
-        <td><%= chatper.content %></td>
+        <td><%= raw chatper.content %></td>
         <td><%= chatper.course_id %></td>
         <td><%= link_to 'Show', chatper %></td>
         <td><%= link_to 'Edit', edit_chatper_path(chatper) %></td>

@@ -17,8 +17,19 @@ gem 'simple_form',"3.0.0.rc"
 
 gem "cells"
 
+#markdown
+gem "redcarpet", "~> 2.2.2"
+gem "rouge", "~> 0.3.10"
+gem 'nokogiri', "~> 1.5.6"
+gem 'auto-space', '0.0.2'
+gem "md_emoji"
+
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem "rails_autolink", ">= 1.1.0"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

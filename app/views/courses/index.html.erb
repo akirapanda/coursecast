@@ -11,7 +11,7 @@
     <div class="span4">
 		<h2><%= course.name %></h2>
 		<p>简介：<%= course.description %></p>
-		<p>内容：<%= course.content %></p>
+		<p>内容：<%= raw course.content %></p>
 		<p>作者：<%= course.author %></p>
 		<%= link_to 'Show', course %>
 		<%= link_to 'Edit', edit_course_path(course) %>
