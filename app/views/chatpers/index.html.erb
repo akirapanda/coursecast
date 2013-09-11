@@ -1,0 +1,33 @@
+<h1>Listing chatpers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Img</th>
+      <th>Content</th>
+      <th>Course</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chatpers.each do |chatper| %>
+      <tr>
+        <td><%= chatper.title %></td>
+        <td><%= chatper.img %></td>
+        <td><%= chatper.content %></td>
+        <td><%= chatper.course_id %></td>
+        <td><%= link_to 'Show', chatper %></td>
+        <td><%= link_to 'Edit', edit_chatper_path(chatper) %></td>
+        <td><%= link_to 'Destroy', chatper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chatper', new_chatper_path %>

@@ -19,6 +19,10 @@
   <strong>Author:</strong>
   <%= @course.author %>
 </p>
-
+<ul>
+<%@course.chatpers.each do |chatper|%>
+	<li><%=chatper.title%></li>
+<%end%>
+</ul>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

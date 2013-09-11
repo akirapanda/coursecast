@@ -1,4 +1,6 @@
 Lesson::Application.routes.draw do
+  resources :chatpers
+
   resources :courses
 
   root 'home#index'
