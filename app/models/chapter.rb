@@ -1,5 +1,5 @@
 class Chapter < ActiveRecord::Base
-  belongs_to  :courses
+  belongs_to  :course
   before_save :markdown_for_body_html
   
   
