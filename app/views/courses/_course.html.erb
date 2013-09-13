@@ -1,0 +1,21 @@
+<div class="course_item row fluid">
+	<div class="span2 fl">
+		<%= image_tag course.cover%>
+	</div>
+	<div class="class_info fl">
+		<h3><%= link_to course.name, course %></h3>
+		<p class="p_intro">简介：<%= course.description %></p>
+		<p>内容：<%= raw course.content %></p>
+		<p>作者：<%= course.author %></p>
+	</div>	
+	<div class="fl">
+		<ul>
+			<li>
+		<%= link_to 'Edit', edit_course_path(course),:class=>'btn btn-primary' %>
+			</li>
+			<li>
+		<%= link_to 'Destroy', course,:class=>'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,4 +1,6 @@
 Lesson::Application.routes.draw do
+  resources :chapters
+
   resources :courses
 
   root 'home#index'

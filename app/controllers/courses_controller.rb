@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.paginate :page=>params[:page],:order=>'created_at desc', :per_page =>12
+    @courses = Course.paginate :page=>params[:page],:order=>'created_at desc', :per_page =>10
     
   end
 
@@ -70,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :description, :content, :author)
+      params.require(:course).permit(:name, :description, :content, :author,:cover)
     end
 end

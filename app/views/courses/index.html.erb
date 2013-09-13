@@ -3,22 +3,9 @@
 <%= button_to 'New Course', new_course_path,:class=>"btn btn-primary",:method=>"get" %>
 <br>
 <%= will_paginate @course%>
-
+<div class="container">
 <% @courses.each_with_index do |course,i| %>
-<%if i%3==0%>
-<div class="row-fluid">
+	<%=render :partial=>course%>
 <% end %>
-    <div class="span4">
-		<h2><%= course.name %></h2>
-		<p>简介：<%= course.description %></p>
-		<p>内容：<%= raw course.content %></p>
-		<p>作者：<%= course.author %></p>
-		<%= link_to 'Show', course %>
-		<%= link_to 'Edit', edit_course_path(course) %>
-		<%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
-<%if i%3==2%>	
 </div>
-<%end%>
-<% end %>
 

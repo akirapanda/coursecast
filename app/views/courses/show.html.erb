@@ -4,7 +4,10 @@
   <strong>Name:</strong>
   <%= @course.name %>
 </p>
-
+<p>
+	<strong>Cover</strong>
+<img><%=	image_tag @course.cover%></img>
+</p>
 <p>
   <strong>Description:</strong>
   <%= @course.description %>
@@ -20,8 +23,8 @@
   <%= @course.author %>
 </p>
 <ul>
-<%@course.chatpers.each do |chatper|%>
-	<li><%=chatper.title%></li>
+<%@course.chapters.each do |chapter|%>
+	<li><%=chapter.title%></li>
 <%end%>
 </ul>
 <%= link_to 'Edit', edit_course_path(@course) %> |

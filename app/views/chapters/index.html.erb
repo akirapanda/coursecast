@@ -1,0 +1,11 @@
+<h1>Listing chapters</h1>
+
+    <% @chapters.each do |chapter| %>
+ 		<%=render :partial=> chapter%>
+    <% end %>
+
+<%= will_paginate @chapters%>
+
+<br>
+
+<%= link_to 'New Chapter', new_chapter_path %>
