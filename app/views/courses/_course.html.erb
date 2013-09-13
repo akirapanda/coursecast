@@ -1,21 +1,27 @@
-<div class="course_item row fluid">
-	<div class="span2 fl">
-		<%= image_tag course.cover%>
+<div class="course_item row-fluid">
+	<div class="row-fluid">
+		<div class="course_admin_action">
+			<span class="offset7">
+			<%= link_to 'Edit', edit_course_path(course),:class=>'btn btn-primary' %>
+			<%= link_to 'Destroy', course,:class=>'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
+			</span>
+		</div>
+		<div class="span2 fl">
+			<%if course.cover?%>
+			<%= image_tag course.cover,:class=>"course_icon"%>
+			<%else%>
+			<%= image_tag ('wrong.png')%>
+			<%end%>
+		</div>
+		<div class="class_info fl">
+			<h3><%= link_to course.name, course %></h3>
+			<p class="p_intro">简介：<%= course.description %></p>
+		</div>	
 	</div>
-	<div class="class_info fl">
-		<h3><%= link_to course.name, course %></h3>
-		<p class="p_intro">简介：<%= course.description %></p>
-		<p>内容：<%= raw course.content %></p>
-		<p>作者：<%= course.author %></p>
-	</div>	
-	<div class="fl">
-		<ul>
-			<li>
-		<%= link_to 'Edit', edit_course_path(course),:class=>'btn btn-primary' %>
-			</li>
-			<li>
-		<%= link_to 'Destroy', course,:class=>'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
-			</li>
-		</ul>
+	<div class="row-fluid">
+		<div class="course_user_action">
+			<span class="badge badge-info">
+		共有<%=course.chapters.count%>课</span>
+		</div>
 	</div>
 </div>
