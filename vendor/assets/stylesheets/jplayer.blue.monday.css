@@ -42,6 +42,9 @@ div.jp-video-270p {
 div.jp-video-360p {
 	width:640px;
 }
+div.jp-video-480p{
+	width:960px;
+}
 div.jp-video-full {
 	/* Rules for IE6 (full-screen) */
 	width:480px;
