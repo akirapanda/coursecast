@@ -7,7 +7,11 @@
 
 $ ->
 	playVideo()
+	$('#myTab a').bind 'click', (e) ->
+		e.preventDefault()
+		$(this).tab('show')
 
+	
 playVideo = ->
 	  url = 'http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v'
 	  if url?
@@ -18,7 +22,7 @@ playVideo = ->
 	        }).jPlayer('play')
 	      swfPath: "/assets"
 	      supplied: "m4v"
-	      size: { width: 960, height: 600,cssClass:'jp-video-480p'}
+	      size: { width: 720, height: 450,cssClass:'jp-video-360p'}
 
 playControl = ->
  	#$("#episode .watch").one 'click', (e) ->

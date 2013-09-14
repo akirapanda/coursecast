@@ -1,29 +1,41 @@
-<div class="row span6 offset1">
-<p id="notice"><%= notice %></p>
+<div class="row-fluid">
+	<div class="span12">
 
-<p>
-  <strong>Title:</strong>
-  <%= @chapter.title %>
-</p>
+	
+		<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
+		<%= link_to 'Back', chapters_path %>
+	</div>
+	<div class="row-fluid">
+		<div class="span8">
+			<%= render "shared/video_player"%>
+		</div>
+		<div class="span4">
+			<ul class="nav nav-tabs" id="myTab">
+			  <li class="active"><a href="#home">章节信息</a></li>
+			  <li><a href="#profile">讲解</a></li>
+			  <li><a href="#messages">Messages</a></li>
+			  <li><a href="#settings">Settings</a></li>
+			</ul>
 
-<p>
-  <strong>Body:</strong>
-  <%= @chapter.body %>
-</p>
+			<div class="tab-content">
+			  <div class="tab-pane active" id="home">
+				<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body html:</strong>
-  <%= @chapter.body_html %>
-</p>
-
-<p>
-  <strong>Course:</strong>
-  <%= @chapter.course_id %>
-</p>
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
-</div>
-<div class="row span12">
-
-<%= render "shared/video_player"%>
+				<p>
+		  			<strong>Title:</strong>
+		  			<%= @chapter.title %>
+				</p>
+				<p>
+		 			<strong>Course:</strong>
+		  			<%= @chapter.course_id %>
+				</p>
+			  </div>
+			  <div class="tab-pane" id="profile">
+			  	<%=raw @chapter.body_html %>
+			  </div>
+			  <div class="tab-pane" id="messages">...</div>
+			  <div class="tab-pane" id="settings">...</div>
+			</div>
+		</div>
+	</div>
 </div>
