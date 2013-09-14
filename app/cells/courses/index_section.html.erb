@@ -1,12 +1,10 @@
-<h1>
-  Courses#index_section
-</h1>
-
-<p>
-  Find me in app/cells/courses/index_section.html.erb
-	
+<h2>
+	热门课程
+</h2>
+<table class="table table-bordered table-striped">	
 	<% @courses.each do |course|%>
-	<%=course.name%>
-	<%=course.id%>
+	<tr>
+		<td><%=link_to course.name,course%></td>
+	</tr>
 	<%end%>
-</p>
+</table>
