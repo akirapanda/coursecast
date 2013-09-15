@@ -1,4 +1,5 @@
 Lesson::Application.routes.draw do
+  devise_for :users
   resources :chapters
 
   resources :courses
