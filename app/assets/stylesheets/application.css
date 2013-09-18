@@ -18,7 +18,9 @@
    margin-right: 35px;
    display: none;
  }
-
+.bg_black{
+	background-color:#000000
+}
 .course_icon {
 	margin-top:20px;
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container root_container">
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
 				<ul class="nav">
@@ -16,6 +16,9 @@
 					<li><%= link_to("课程",courses_path)%></li>
 					<li><%= link_to("章节",chapters_path)%>
 				</ul>
+				<ul class="nav pull-right">
+					<li><%= link_to("登陆",new_user_session_path,:method=>:get)%></li>
+                </ul>
 			</div>
 		</div>
 	</div>
