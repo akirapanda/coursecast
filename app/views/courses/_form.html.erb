@@ -2,17 +2,26 @@
 
 	<%= render "shared/error_messages",:target=>@course%>
 
+  <fieldset>
+	<legend>课程封面</legend>
+ </fieldset>
 
+	<%if @course.cover?%>
+	<%= image_tag @course.cover,:class=>"course_icon"%>
+	<%else%>
+	<%= image_tag ('wrong.png')%>
+	<%end%>
+	 <div class="control-group">
+	    <div class="controls">
+	    <%= f.input :cover%>
+	    </div>
+	</div>
 
   <fieldset>
 	<legend>课程基本信息</legend>
  </fieldset>
- <div class="control-group">
-    <%= f.label :cover,:class=>"control-label" %>
-    <div class="controls">
-    <%= f.input :cover %>
-    </div>
-</div>
+
+
  <div class="control-group">
     <%= f.label :name,:class=>"control-label" %>
     <div class="controls">

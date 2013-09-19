@@ -1,7 +1,13 @@
+<% content_for :head do %>
+  <%= meta_tag('chapter-url', @chapter.video_url) %>
+<% end %>
+
+
+
+
 <div class="row-fluid">
 	<div class="span12">
-
-	
+		<%= "url is #{@chapter.video_url}"%> <br/>
 		<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
 		<%= link_to 'Back', chapters_path %>
 	</div>

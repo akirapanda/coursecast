@@ -5,6 +5,9 @@
 
 //= require jquery.jplayer.min
 
+grabVideoUrl = ->
+  $("meta[name=chapter-url]").attr("content")
+
 $ ->
 	playVideo()
 	$('#myTab a').bind 'click', (e) ->
@@ -13,7 +16,7 @@ $ ->
 
 	
 playVideo = ->
-	  url = 'http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v'
+	  url = grabVideoUrl()
 	  if url?
 	    $("#jquery_jplayer_1").jPlayer
 	      ready: ->

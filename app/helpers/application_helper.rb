@@ -12,4 +12,9 @@ module ApplicationHelper
     })
     content_tag(:div, raw(MarkdownConverter.convert(str)), :class => options[:class])
   end
+  
+  
+  def meta_tag(name, value)
+    %(<meta name="#{name}" content="#{Rack::Utils.escape_html(value)}"/>).html_safe
+  end
 end
