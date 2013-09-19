@@ -1,33 +1,25 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
-<p>
-	<strong>Cover</strong>
-<img><%=	image_tag @course.cover%></img>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @course.content %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @course.author %>
-</p>
+	
+<div class="hero-unit">
+	<h1> <%= @course.name %></h1>
+	<small><%=@course.description %></small>	
+	<p class="text-info">
+		<%= raw @course.content %>
+	</p>
+	<p class="text-info">作者:<%= @course.author %>
+  </p>
+</div>
 <ul>
-<%@course.chapters.each do |chapter|%>
-	<li><%=chapter.title%></li>
+
+<%if @course.chapters.count%>
+
+<% @course.chapters.each do |chapter| %>
+	<%=render 'chapters/chapter' ,:chapter=>chapter%>
+<% end %>
+	<div class="alert">
+	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+	  	 暂无相应章节信息
+	</div>
+<%else%>
 <%end%>
 </ul>
-
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>

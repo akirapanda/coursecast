@@ -1,0 +1,26 @@
+<tr>
+	<td><%=chapter.id%></td>	
+	<td><%= link_to chapter.title,edit_chapter_path(chapter),:method=>:get%></td>	
+	<td><%= chapter.duration%></td>
+	<td><%= chapter.created_at%><br>
+	<% if chapter.publish%>
+	<%='已发布'%>
+	<%else%>
+	<%='草稿'%>
+	<%end%>
+	</td>
+	<td>
+		<div class="btn-group">
+		  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+		    操作
+		    <span class="caret"></span>
+		  </a>
+		  <ul class="dropdown-menu">
+		  	<li><%=link_to '编辑',edit_chapter_path(chapter)%></li>
+		  	<li><%=link_to '删除',chapter_path(chapter),:method=>:delete,:confirm => "OK?"%></li>
+			
+		  </ul>
+		</div>
+	</td>
+	
+</tr>

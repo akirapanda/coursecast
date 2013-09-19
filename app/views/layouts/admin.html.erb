@@ -29,6 +29,7 @@
 		</div>
 	</div>
 	<div class="container">
+		
 		<div class="container-fluid">
 		  <div class="row-fluid">
 		    <div class="span2">		    
@@ -37,10 +38,20 @@
 					<li><%=link_to("管理工具首页",cpanel_root_path)%></li>
 		        	<li class="nav-header">课程信息管理</li>
 		          	<li>	<%=link_to("课程管理",cpanel_courses_path)%></li>
+		          	<li>	<%=link_to("新建课程",new_course_path)%></li>
 		          	<li>	<%=link_to("章节管理",cpanel_chapters_path)%></li>
+		          	<li>	<%=link_to("新建章节",new_chapter_path)%></li>
+		
+		
 		        </ul>
 			</div>
 		    <div class="span10">
+				<%if notice%>
+				<div class="alert alert-info">
+					<a class="close" data-dismiss='alert' href="#">x</a>
+				<p id="notice"><%= notice %></p>
+				</div>
+				<%end%>
 				<%=yield%>
 			</div>
 		  </div>

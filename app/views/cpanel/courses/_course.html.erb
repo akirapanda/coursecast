@@ -1,10 +1,10 @@
 <div class="course_item row-fluid">
 	<div class="row-fluid">
 		<div class="course_admin_action">
-			<span class="offset7">
-			<%= link_to 'Edit', edit_course_path(course),:class=>'btn btn-primary' %>
-			<%= link_to 'Destroy', course,:class=>'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
-			</span>
+			<div class="btn-group">
+		  <%= link_to '编辑', edit_course_path(course),:class=>'btn' %>
+		  <%= link_to '删除', course,:class=>'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
 		</div>
 		<div class="span2 fl">
 			<%if course.cover?%>
