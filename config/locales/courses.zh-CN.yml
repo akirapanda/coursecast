@@ -1,3 +1,4 @@
 "zh-CN":
     courses:
-        title:"创建新的课程"
+        title: "创建新的课程"
+        show_title: "浏览课程" 

@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /courses
   # GET /courses.json
@@ -57,8 +58,7 @@ class CoursesController < ApplicationController
   def destroy
     @course.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url }
-      format.json { head :no_content }
+      format.html { redirect_to cpanel_courses_url, notice: "Course #{@course.name} was successfully updated." }
     end
   end
 
