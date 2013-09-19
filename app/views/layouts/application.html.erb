@@ -17,7 +17,12 @@
 					<li><%= link_to("章节",chapters_path)%>
 				</ul>
 				<ul class="nav pull-right">
+					<% if current_user %>
+					<li><%=link_to("登出" ,destroy_user_session_path,:method=>:delete)%></li>
+					<%else%>
 					<li><%= link_to("登陆",new_user_session_path,:method=>:get)%></li>
+					
+					<%end%>
                 </ul>
 			</div>
 		</div>

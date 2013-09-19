@@ -1,1 +1,25 @@
 <h3>自定义注册页面</h3>
+<span class="current">加入社区</span>
+<div class="content">
+    <div class="box">
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <fieldset>
+        <legend><%= t("common.login") %></legend>
+        <%= f.input :email, :input_html => { :style => "width:180px;" } %>
+        <%= f.input :password, :input_html => { :style => "width:180px;" } %>
+        <% if devise_mapping.rememberable? -%>
+        <div class="control-group checkbox optional">
+          <label class="checkbox optional control-label"></label>
+          <div class="controls">
+            <div class="inputs-list"><label for="user_remember_me"><%= f.check_box :remember_me, :style => "width:auto;" %> <%= t("common.remember_me") %></label></div>
+          </div>
+        </div>
+        <% end%>
+        <div class="form-actions">
+          <%= f.submit '登陆', :class => "btn btn-primary"%>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
+<%= render "devise/shared/links" %>

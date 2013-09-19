@@ -32,12 +32,12 @@ module Lesson
       config.action_mailer.default_url_options = { :host => "localhost:3000" } #提示中有提到需要配置，即执行rails g devise:install
       config.action_mailer.delivery_method = :smtp
       config.action_mailer.smtp_settings = {
-      :address => "smtp.sina.com",  #smtp.qq.com
+      :address => "smtp.qq.com",  #smtp.qq.com
       :port => 25,
-      :domain => "sina.com",   #qq.com
+      :domain => "qq.com",   #qq.com
       :authentication => :login,
-      :user_name => "xxxxxxx@sina.com", #修改邮箱
-      :password => "xxxxxxxx" #修改正确的密码
+      :user_name => "18071400@qq.com", #修改邮箱
+      :password => "Xiaoke1021" #修改正确的密码
     }
   end
 end
