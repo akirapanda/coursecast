@@ -1,6 +1,5 @@
-class Cpanel::HomeController < ApplicationController
+class Cpanel::HomeController < Cpanel::ApplicationController
   layout "admin"
   def index
-    @chapters = Chapter.paginate :page=>params[:page],:per_page=>8    
   end
 end

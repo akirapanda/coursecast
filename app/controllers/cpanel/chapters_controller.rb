@@ -1,4 +1,4 @@
-class Cpanel::ChaptersController < ApplicationController
+class Cpanel::ChaptersController < Cpanel::ApplicationController
   layout "admin"
   
   def index

@@ -12,6 +12,20 @@
  *= require_self
  *= require_tree .
  */
+
+.footer ul{
+	text-align:center;
+	font-size:13px;
+	list-style:none;
+	height:100px;
+}
+.footer ul li{
+	display:inline;
+	letter-spacing:2px;
+	padding:0px 12px;
+	font-size:12px;
+	
+}
  .jp-video-episode {
    width: 960px;
    margin-top: 40px;

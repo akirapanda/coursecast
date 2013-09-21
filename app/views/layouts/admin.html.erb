@@ -18,7 +18,11 @@
 				</ul>
 				<ul class="nav pull-right">
 					<% if current_user %>
+						<% if current_user.admin %>		
 					<li><%=link_to("管理" ,cpanel_root_path,:method=>:get)%></li>
+						<%end%>
+				
+				
 					<li><%=link_to("登出" ,destroy_user_session_path,:method=>:delete)%></li>
 					<%else%>
 					<li><%= link_to("登陆",new_user_session_path,:method=>:get)%></li>
