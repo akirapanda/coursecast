@@ -12,24 +12,17 @@
 			<ul class="nav nav-tabs" id="myTab">
 			  <li class="active"><a href="#home">章节信息</a></li>
 			  <li><a href="#profile">讲解</a></li>
-			  <li><a href="#messages">Messages</a></li>
+			  <li><a href="#messages">问题</a></li>
 			</ul>
 
 			<div class="tab-content">
 			  <div class="tab-pane active" id="home">
-				<p id="notice"><%= notice %></p>
-
-				<p>
-		  			<strong>Title:</strong>
-		  			<%= @chapter.title %>
-				</p>
-				<p>
-		 			<strong>Course:</strong>
-		  			<%= @chapter.course_id %>
-				</p>
+		  			<h4><%=@chapter.course.name%></h4>
+		 			<h5><%= @chapter.title %></h5>	
+					<%=@chapter.description%>
 			  </div>
 			  <div class="tab-pane" id="profile">
-			  	<%=raw @chapter.body_html %>
+				  	<%=raw @chapter.body_html %>
 			  </div>
 			  <div class="tab-pane" id="messages">...</div>
 			</div>

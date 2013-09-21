@@ -9,11 +9,12 @@ grabVideoUrl = ->
   $("meta[name=chapter-url]").attr("content")
 
 $ ->
-	playControl()
-	playVideo()
 	$('#myTab a').bind 'click', (e) ->
 		e.preventDefault()
 		$(this).tab('show')
+	playControl()
+	playVideo()
+
 
 	
 playVideo = ->

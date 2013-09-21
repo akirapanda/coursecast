@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919090406) do
+ActiveRecord::Schema.define(version: 20130921155156) do
 
   create_table "chapters", force: true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20130919090406) do
     t.string   "download_url"
     t.integer  "duration"
     t.boolean  "publish"
+    t.string   "description"
   end
 
   create_table "courses", force: true do |t|
