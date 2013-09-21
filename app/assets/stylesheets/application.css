@@ -37,6 +37,7 @@
 .bg_black{
 	background-color:#000000
 }
+
 .course_icon {
 	margin-top:20px;
 }
@@ -59,6 +60,7 @@
 	border-style:solid;
 	border-color:#C2C2C2;
 	margin-bottom:20px;
+	margin-left:20px;
 	border-radius: 15px;
 	padding-top:10px;
 	padding-bottom:5px;

@@ -16,10 +16,11 @@
 <% @course.chapters.each do |chapter| %>
 	<%=render 'chapters/chapter' ,:chapter=>chapter%>
 <% end %>
-	<div class="alert">
-	  	 暂无相应章节信息
-	</div>
+
 <%else%>
+<div class="alert">
+  	 暂无相应章节信息
+</div>
 <%end%>
 </div>
 

@@ -7,15 +7,12 @@
 
 <div class="row-fluid">
 	<div class="row-fluid">
-		<div class="span8">
-			<%= render "shared/video_player"%>
-		</div>
+
 		<div class="span4">
 			<ul class="nav nav-tabs" id="myTab">
 			  <li class="active"><a href="#home">章节信息</a></li>
 			  <li><a href="#profile">讲解</a></li>
 			  <li><a href="#messages">Messages</a></li>
-			  <li><a href="#settings">Settings</a></li>
 			</ul>
 
 			<div class="tab-content">
@@ -35,8 +32,10 @@
 			  	<%=raw @chapter.body_html %>
 			  </div>
 			  <div class="tab-pane" id="messages">...</div>
-			  <div class="tab-pane" id="settings">...</div>
 			</div>
+		</div>
+		<div class="span8">
+			<%= render "shared/video_player"%>
 		</div>
 	</div>
 </div>

@@ -9,6 +9,7 @@ grabVideoUrl = ->
   $("meta[name=chapter-url]").attr("content")
 
 $ ->
+	playControl()
 	playVideo()
 	$('#myTab a').bind 'click', (e) ->
 		e.preventDefault()
@@ -22,16 +23,18 @@ playVideo = ->
 	      ready: ->
 	        $(this).jPlayer("setMedia", {
 	          m4v: url
-	        }).jPlayer('play')
+	        }).jPlayer('pause')
 	      swfPath: "/assets"
 	      supplied: "m4v"
-	      size: { width: 720, height: 450,cssClass:'jp-video-360p'}
-
+	      size: { width: 720, height: 450,cssClass:'jp-video-450p'}
+	      smoothPlayBar: true
+	      keyEnabled: true
+		 
+	  $("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")})
+		
+	
+		
 playControl = ->
- 	#$("#episode .watch").one 'click', (e) ->
-	    $("#jp_container_1").show()
-	    playVideo()	
-
 	   $('#jquery_jplayer_1').bind 'click', (e) ->
 	    if $('.jp-play').is ':visible'
 	      $(this).jPlayer('play') 
